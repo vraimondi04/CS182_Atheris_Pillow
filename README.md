@@ -1,24 +1,38 @@
 # CS182 Project: Fuzzing Pillow with Atheris
 
-### Members:
+## Members:
 
 - Mika Shanela Carodan
 - Vincent Raimondi
 - Ashley Kim
 
-### Contents:
+## Contents:
 
-This repo consists of a forked repository of Atheris as well as our fuzzing tests stored in CS182/.
+This repo consists of a forked repository of Atheris as well as our fuzzing files stored in CS182/.
+
+- Please navigate to the attached [google drive](https://drive.google.com/drive/folders/1di2p9FGTu3h5kLYKZ1T050iQiocvzmQU?usp=sharing) for accessing image corpus, crashes, and valid input behaviors.
+   - in.zip is our image corpus
+   - readable_crashes folder shows our program crashes + associated concrete inputs for RQ1 (fuzzing w/o seed) and RQ2 (fuzzing with seed corpus)
+   - valid_input_behaviors folder shows valid input's image properties + associated concrete inputs for RQ1 (fuzzing w/o seed) and RQ2 (fuzzing with seed corpus)
+   - unreadable_crashes contains raw unreadable crash data
+- pillowExample.py is a demo program used to show Pillow library functionality
+- pillow_fuzz_initial.py is our initial implementation that uses fixed file images (used for debugging purposes only)
+   - Note: 'cat.png', 'deer.png', 'fox.png', 'rabbit.jpg' are fixed file images used as inputs for pillow_fuzz_initial.py
+- pillow_fuzz.py is our final implementation for this project  
 
 
 
-### Usage Guide:
+## Usage Guide:
 
 Atheris and Pillow's official documentation can be found in their respective Github repositories. Listed below are the steps to install and test Pillow with Atheris:
 
 - python3 -m pip install --upgrade pip
 - python3 -m pip install --upgrade Pillow
 - pip install atheris
+
+### How to run our pillow_fuzz.py:
+- Run without image corpus: python3 pillow_fuzz.py -rss_limit_mb=40960 -max_len=4096 -max_total_time=3600
+- Run with image corpus: python3 pillow_fuzz.py in/ -rss_limit_mb=40960 -max_len=4096 -max_total_time=3600
 
 ---
 
