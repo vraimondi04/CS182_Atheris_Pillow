@@ -1,3 +1,27 @@
+# CS182 Project: Fuzzing Pillow with Atheris
+
+### Members:
+
+- Mika Shanela Carodan
+- Vincent Raimondi
+- Ashley Kim
+
+### Contents:
+
+This repo consists of a forked repository of Atheris as well as our fuzzing tests stored in CS182/.
+
+
+
+### Usage Guide:
+
+Atheris and Pillow's official documentation can be found in their respective Github repositories. Listed below are the steps to install and test Pillow with Atheris:
+
+- python3 -m pip install --upgrade pip
+- python3 -m pip install --upgrade Pillow
+- pip install atheris
+
+---
+
 # Atheris: A Coverage-Guided, Native Python Fuzzer
 
 Atheris is a coverage-guided Python fuzzing engine. It supports fuzzing of Python code, but also native extensions written for CPython. Atheris is based off of libFuzzer. When fuzzing native code, Atheris can be used in combination with Address Sanitizer or Undefined Behavior Sanitizer to catch extra bugs.
